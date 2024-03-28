@@ -50,6 +50,9 @@ function App() {
         case "overcast clouds":
           setDesc("ابری");
           break;
+        case "moderate rain":
+          setDesc("بارش متوسط باران");
+          break;
       }
     }
   };
@@ -109,7 +112,7 @@ function App() {
               className="city-icon"
               src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
             />
-            {/* <p>{weather.weather[0].description}</p> */}
+            <p>{weather.weather[0].description}</p>
             <p className="description">{description}</p>
           </div>
         </div>
