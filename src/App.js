@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import "./App.css";
 import { fetchWeather } from "./api/getWeather";
+import { ReactTyped } from "react-typed";
 
 let deferredPrompt;
 
@@ -83,7 +84,18 @@ function App() {
   };
   return (
     <div className="main-container">
-      <h1 className="title">اپلیکیشن نمایش آب و هوا</h1>
+      <h1 className="title">
+        اپلیکیشن نمایش آب و هوا
+        {/* <div className="animated-typing"> */}
+        <ReactTyped
+          // className="title"
+          strings={[" + زبان ریکت ", " + تکنولوژی PWA ", " + انیمیشن تایپ  "]}
+          typeSpeed={150}
+          backSpeed={100}
+          loop
+        />
+      </h1>
+      {/* </div> */}
       {installable && (
         <button className="btn-install" onClick={handleInstallClick}>
           برای نصب اپلیکشن کلیک کنید
@@ -112,7 +124,7 @@ function App() {
               className="city-icon"
               src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
             />
-            <p>{weather.weather[0].description}</p>
+            <p className="en-description">{weather.weather[0].description}</p>
             <p className="description">{description}</p>
           </div>
         </div>

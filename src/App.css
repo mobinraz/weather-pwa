@@ -1,9 +1,15 @@
+@font-face {
+  font-family: iransans;
+  src: url("../public/fonts/iransans.ttf");
+}
+
 html,
 body,
 #root {
   height: 100%;
   margin: 0;
   font-size: 0.9rem;
+  font-family: "iransans";
 }
 .main-container {
   background: url("/public/images/1.jpg");
@@ -23,6 +29,7 @@ body,
   text-align: center;
   border-radius: 20px;
   font-size: 1.5rem;
+  font-family: "iransans";
 }
 .city {
   display: flex;
@@ -64,8 +71,13 @@ body,
   padding: 9px 15px;
   border-radius: 10px;
   font-size: 24px;
+  font-family: "iransans";
+}
+.en-description {
+  font-size: 17px;
 }
 .description {
+  font-family: "iransans";
   font-size: 24px;
   font-weight: 700;
 }
